@@ -1,0 +1,10 @@
+#pragma once
+
+#include <Arduino.h>
+
+enum ISR_Events {DAYSTATECHANGED, DOORG1DEBOUNCE, DOORG2DEBOUNCE, GATEDEBOUNCE, DOORG1MOVED, DOORG2MOVED, GATEMOVED, START, SOLVED,};
+
+void IRAM_ATTR ISR_DoorG1Moved();
+void IRAM_ATTR ISR_DoorG2Moved();
+void IRAM_ATTR ISR_DayStateChanged();
+void IRAM_ATTR ISR_GateMoved();
